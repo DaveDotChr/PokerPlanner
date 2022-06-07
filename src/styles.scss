@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+.Sidebar{
+    float: left;
+    width: 10%;
+    background-color: aqua;
+    height: 100%;
+}
+
+.History{
+    float: left;
+    height: 100%;
+
+    width: 20%;
+    background-color: red;
+
+
+}
+
+.Main-Content{
+    height: 100%;
+    float: left;
+    width: 70%;
+    background-color: blue;
+}
+
+body, html{
+    height: 100%;
+    margin: 0px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

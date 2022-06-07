@@ -1,0 +1,19 @@
+.sidebar-component {
+    width: 100%;
+    border-style: none;
+    border-radius: 0%;
+}
+
+.sidebar-content {
+    width: calc(100% - 4px);
+    float: left;
+}
+
+.resizehandler {
+    width: 4px;
+    background-color: black;
+    float: right;
+    height: 100%;
+    cursor: col-resize;
+    -webkit-user-drag: none;
+}

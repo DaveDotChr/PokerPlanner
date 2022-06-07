@@ -1,0 +1,11 @@
+<div class="Sidebar" [style.width.px]="width">
+  <div class="sidebar-content">
+    <div *ngFor="let link of links" >
+      <a routerLink="{{link.path}}"><button class="sidebar-component" mat-raised-button>{{link.name}}</button></a>
+    </div>
+  </div>
+  <!-- <div class="resizehandler"> -->
+  <div class="resizehandler" (mousedown)="setStatus($event, 1)" (window:mouseup)="setStatus($event, 2)">
+    <!-- </div> -->
+  </div>
+</div>

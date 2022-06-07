@@ -1,0 +1,8 @@
+<span class="Title"></span>
+  <mat-form-field appearance="fill">
+    <mat-label>Choose an option</mat-label>
+    <mat-select [(value)]="selectVal" (selectionChange)="onTicketChange()">
+      <mat-option [value]="option" *ngFor="let option of tickets">{{option.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+<button mat-raised-button (click)="checkValue()">{{testvar}}</button>
