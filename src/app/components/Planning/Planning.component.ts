@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { MatSelect, MatSelectChange } from '@angular/material/select';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
+import { invoke } from '@tauri-apps/api/tauri';
+import { message } from '@tauri-apps/api/dialog';
 
 type Ticket = {
     name: String;
@@ -46,7 +48,8 @@ export class PlanningComponent implements OnInit {
   public checkValue(){
     console.log(this.select.value);
     console.log(this.select);
-    
+    invoke<Ticket[]>("wait").then((message: Ticket[]) => this.tickets = message
+    );
     this.selectedTicket;
   }
 

@@ -6,3 +6,10 @@
     </mat-select>
   </mat-form-field>
 <button mat-raised-button (click)="checkValue()">{{testvar}}</button>
+
+
+<div *ngFor="let Ticket of tickets">
+  <div>{{Ticket.name}}</div>
+  <div>{{Ticket.CHR}}</div>
+  <div>{{Ticket.inhalt}}</div>
+</div>
