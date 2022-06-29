@@ -55,6 +55,7 @@ fn wait() -> Result<Vec<Ticket>, String> {
   // vec![]
   let mut tickets: Vec<Ticket> = Vec::new();
   tickets.push(Ticket { name: String::from("test"), CHR: 12, inhalt: String::from("sdfsdf") });
+  tickets.push(Ticket { name: String::from("tesdfdsfst"), CHR: 13, inhalt: String::from("sdfsdf") });
   Ok(tickets)
   // let client: Client = ClientBuilder::new().build().expect("Failed to create client");
   // let response = client.send(HttpRequestBuilder::new("GET", "https://www.rust-lang.org").unwrap().response_type(ResponseType::Binary)).await;
