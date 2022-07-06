@@ -50,13 +50,19 @@ impl serde::Serialize for Ticket{
 }
 
 #[tauri::command]
-fn wait() -> Result<Vec<Ticket>, String> {
+fn wait() -> Vec<Ticket> {
   print!("function wait started");
   // vec![]
+
+  let ints = [1,2,3,4,5];
+
+  let ints2 = &ints[2..3];
+
+
   let mut tickets: Vec<Ticket> = Vec::new();
   tickets.push(Ticket { name: String::from("test"), CHR: 12, inhalt: String::from("sdfsdf") });
   tickets.push(Ticket { name: String::from("tesdfdsfst"), CHR: 13, inhalt: String::from("sdfsdf") });
-  Ok(tickets)
+  tickets
   // let client: Client = ClientBuilder::new().build().expect("Failed to create client");
   // let response = client.send(HttpRequestBuilder::new("GET", "https://www.rust-lang.org").unwrap().response_type(ResponseType::Binary)).await;
   // let test: String = String::from("sdfsdfsdf");

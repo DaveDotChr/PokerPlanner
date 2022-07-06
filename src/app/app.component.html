@@ -1,10 +1,10 @@
 
-<app-Sidebar (resized)="resizeContent($event)"></app-Sidebar>
+<app-Sidebar #Sidebar (resized)="resizeContent($event)"></app-Sidebar>
 
-<div id="Main-Content" class="Main-Content"  [style.width.px]="width">
+<div id="Main-Content" class="Main-Content"  [style.width.px]="main_width">
   <router-outlet></router-outlet>
 </div>
-<div id="History" class="History">asd</div>
+<div id="History" class="History" [style.width.px]="history_width">asd</div>
 
 
 

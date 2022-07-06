@@ -16,6 +16,8 @@ enum elementstatus {
 export class SidebarComponent implements OnInit {
   @Input('width') public width: number = window.visualViewport.width * 0.1;
   @Output() resized = new EventEmitter<number>();
+  
+
   public mouse!: { x: number; y: number; };
   public status: elementstatus = elementstatus.normal;
   smth: any;
@@ -37,7 +39,7 @@ export class SidebarComponent implements OnInit {
         y: event.clientY
      }
      if(this.status === elementstatus.drag){
-       this.width = this.mouse.x;
+       //this.width = this.mouse.x;
        this.resized.emit(this.mouse.x);
      }
   }
